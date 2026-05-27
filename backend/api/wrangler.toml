@@ -1,0 +1,19 @@
+name = "scrubsafe-api"
+main = "src/index.ts"
+compatibility_date = "2025-01-01"
+compatibility_flags = ["nodejs_compat"]
+
+[vars]
+ENVIRONMENT = "development"
+
+[dev]
+port = 8787
+
+[[d1_databases]]
+binding = "SCRUBSAFE_DB"
+database_name = "scrubsafe"
+database_id = "REPLACE_AFTER_wrangler_d1_create_scrubsafe"
+
+[[kv_namespaces]]
+binding = "RATE_LIMIT"
+id = "REPLACE_AFTER_wrangler_kv_namespace_create_RATE_LIMIT"

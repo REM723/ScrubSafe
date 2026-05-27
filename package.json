@@ -1,0 +1,19 @@
+{
+  "name": "scrubsafe",
+  "private": true,
+  "version": "0.0.0",
+  "engines": {
+    "node": ">=20",
+    "pnpm": ">=9"
+  },
+  "scripts": {
+    "dev": "pnpm --filter @scrubsafe/web dev",
+    "build": "pnpm -r build",
+    "check": "pnpm -r check",
+    "test": "pnpm -r test",
+    "test:e2e": "pnpm --filter @scrubsafe/web test:e2e",
+    "lint": "pnpm -r lint",
+    "format": "pnpm -r format",
+    "clean": "pnpm -r exec -- rm -rf .svelte-kit build dist .wrangler"
+  }
+}

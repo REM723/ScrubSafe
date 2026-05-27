@@ -1,0 +1,14 @@
+node_modules/
+.svelte-kit/
+build/
+dist/
+.wrangler/
+.env
+.env.local
+.env.*.local
+*.tsbuildinfo
+playwright-report/
+test-results/
+.DS_Store
+Thumbs.db
+screenshot-*.png

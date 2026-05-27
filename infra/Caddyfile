@@ -1,0 +1,21 @@
+{
+  local_certs
+  auto_https off
+}
+
+localhost:3000 {
+  # Proxy API calls to Hono worker
+  handle /api/* {
+    uri strip_prefix /api
+    reverse_proxy localhost:8787
+  }
+
+  handle /health {
+    reverse_proxy localhost:8787
+  }
+
+  # Everything else goes to SvelteKit dev server
+  handle {
+    reverse_proxy localhost:5173
+  }
+}
