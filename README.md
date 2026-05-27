@@ -79,6 +79,3 @@ pnpm format        # Prettier all packages
 
 The core architectural rule: **no file bytes may ever leave the browser.** The backend never receives, processes, or stores file content. Any server-side file handling is a fundamental violation of ScrubSafe's product contract.
 
-## License
-
-MIT
