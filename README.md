@@ -28,16 +28,6 @@ UI thread
 
 The `ArrayBuffer` is **transferred** (zero-copy) to the worker — the original reference is detached. File bytes never touch a network socket.
 
-## Stack
-
-| Layer | Technology |
-|-------|-----------|
-| Frontend | SvelteKit + Svelte 5, TypeScript strict, Tailwind CSS v4 |
-| Processing | Web Workers, exifr, piexifjs, pdf-lib, JSZip |
-| Backend | Hono on Cloudflare Workers (auth, usage counters, billing only) |
-| Storage | Cloudflare D1 (SQLite), KV (rate limiting) |
-| Testing | Vitest (unit), Playwright (e2e) |
-| Deploy | Cloudflare Pages (frontend), Cloudflare Workers (API) |
 
 ## Monorepo layout
 
